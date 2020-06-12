@@ -27,7 +27,10 @@ def spread_scraper(url):
     odds['away'] = 1 - odds['home']
     odds['spread'] = odds['spread'].apply(lambda x: float(x))
     odds['opponent_spread'] = -1 * odds['spread']
-
+    odds['favorite'] = odds['spread'] < 0
+    odds['favorite'] = odds['favorite'].replace(to_replace=[True, False], value=[1, 0])
+    odds['underdog'] = 1 - odds['favorite']
+    
     td1 = {'Chicago': 'BEARS', 'NY Jets': 'JETS', 'LA Rams': 'RAMS', 'Miami': 'DOLPHINS', 'Jacksonville': 'JAGUARS',
             'Tennessee':'TITANS', 'Washington':'REDSKINS', 'Atlanta': 'FALCONS', 'Cincinnati':'BENGALS', 'LA Chargers':'CHARGERS',
             'San Francisco':'49ERS', 'Arizona':'CARDINALS','NY Giants':'GIANTS', 'Pittsburgh':'STEELERS','Houston':'TEXANS',
