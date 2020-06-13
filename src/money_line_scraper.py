@@ -283,3 +283,40 @@ ml15 = w15_money_line.copy()
 ml16 = w16_money_line.copy() 
 ml17 = w17_money_line.copy() 
 
+# run the following to get team names to match other dataframes used
+
+td1 = {'Chicago': 'BEARS', 'NY Jets': 'JETS', 'LA Rams': 'RAMS', 'Miami': 'DOLPHINS', 'Jacksonville': 'JAGUARS',
+ 'Tennessee':'TITANS', 'Washington':'REDSKINS', 'Atlanta': 'FALCONS', 'Cincinnati':'BENGALS', 'LA Chargers':'CHARGERS',
+ 'San Francisco':'49ERS', 'Arizona':'CARDINALS','NY Giants':'GIANTS', 'Pittsburgh':'STEELERS','Houston':'TEXANS',
+ 'Denver':'BRONCOS', 'Tampa Bay':'BUCCANEERS','Green Bay':'PACKERS','Dallas':'COWBOYS',
+ 'Baltimore':'RAVENS', 'Buffalo':'BILLS', 'Indianapolis':'COLTS', 'Seattle':'SEAHAWKS',
+ 'Oakland':'RAIDERS','New Orleans':'SAINTS','Cleveland':'BROWNS','Detroit':'LIONS','Philadelphia':'EAGLES',
+ 'Kansas City':'CHIEFS','Minnesota':'VIKINGS','New England':'PATRIOTS', 'Carolina':'PANTHERS'}
+
+ml5['team'] = ml5['team'].replace(to_replace=td1.keys(), value=td1.values())
+ml6['team'] = ml6['team'].replace(to_replace=td1.keys(), value=td1.values())
+ml7['team'] = ml7['team'].replace(to_replace=td1.keys(), value=td1.values())
+ml8['team'] = ml8['team'].replace(to_replace=td1.keys(), value=td1.values())
+ml9['team'] = ml9['team'].replace(to_replace=td1.keys(), value=td1.values())
+ml10['team'] = ml10['team'].replace(to_replace=td1.keys(), value=td1.values())
+ml11['team'] = ml11['team'].replace(to_replace=td1.keys(), value=td1.values())
+ml12['team'] = ml12['team'].replace(to_replace=td1.keys(), value=td1.values())
+ml13['team'] = ml13['team'].replace(to_replace=td1.keys(), value=td1.values())
+ml14['team'] = ml14['team'].replace(to_replace=td1.keys(), value=td1.values())
+ml15['team'] = ml15['team'].replace(to_replace=td1.keys(), value=td1.values())
+ml16['team'] = ml16['team'].replace(to_replace=td1.keys(), value=td1.values())
+ml17['team'] = ml17['team'].replace(to_replace=td1.keys(), value=td1.values())
+
+ml5['opp'] = ml5['opp'].replace(to_replace=td1.keys(), value=td1.values())
+ml6['opp'] = ml6['opp'].replace(to_replace=td1.keys(), value=td1.values())
+ml7['opp'] = ml7['opp'].replace(to_replace=td1.keys(), value=td1.values())
+ml8['opp'] = ml8['opp'].replace(to_replace=td1.keys(), value=td1.values())
+ml9['opp'] = ml9['opp'].replace(to_replace=td1.keys(), value=td1.values())
+ml10['opp'] = ml10['opp'].replace(to_replace=td1.keys(), value=td1.values())
+ml11['opp'] = ml11['opp'].replace(to_replace=td1.keys(), value=td1.values())
+ml12['opp'] = ml12['opp'].replace(to_replace=td1.keys(), value=td1.values())
+ml13['opp'] = ml13['opp'].replace(to_replace=td1.keys(), value=td1.values())
+ml14['opp'] = ml14['opp'].replace(to_replace=td1.keys(), value=td1.values())
+ml15['opp'] = ml15['opp'].replace(to_replace=td1.keys(), value=td1.values())
+ml16['opp'] = ml16['opp'].replace(to_replace=td1.keys(), value=td1.values())
+ml17['opp'] = ml17['opp'].replace(to_replace=td1.keys(), value=td1.values())
