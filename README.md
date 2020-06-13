@@ -95,6 +95,17 @@ Future work should include pivoting to baseball because the season is longer mak
 Deployment
 There are several issues to address before deployment, notably, scraping live money lines, at this time no live sports are happening so this was not possible. Money lines and spreads change and that would make deploying any model difficult.
 
+To scrape a season of statistics follow the instructions in the file located in the src:
+
+`scraper_1.py` 
+
+as of this time issues exist there and stats are scraped from `cs2take2.ipynb` saved to a csv called 'backup_stats5312020.csv and the opened in the modeling file. 
+
+
+The money line scraper uses selenium to scrape closing money lines from teamrankings.com, this was later replaced by the oddsportal scraper but it is what I used for the 2019 season which was modeled. Further work will continue to use the oddsportal scraper, but it can be run from the following file:
+
+`money_line_scraper.py`
+
 
 
 
