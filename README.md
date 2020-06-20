@@ -95,7 +95,7 @@ Future work should include pivoting to baseball because the season is longer mak
 Deployment
 There are several issues to address before deployment, notably, scraping live money lines, at this time no live sports are happening so this was not possible. Money lines and spreads change and that would make deploying any model difficult.
 
-
+The entire model from start to finish is run the notebook `model_start_to_finish.ipynb`
 
 To scrape, format, and a feature engineer a season of NFL statistics the file `scraper_61920.py` is used.
 
@@ -108,6 +108,8 @@ The money line scraper uses selenium to scrape closing money lines from teamrank
 `money_line_scraper.py`
 
 the money line scraper will be replaced with  `oddsportal_scraper.py` in future runs as it is cleaner, and scraping oddsportal gives the ability to scrape live money lines and spreads.
+
+
 
 
 
