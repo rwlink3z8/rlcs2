@@ -5,15 +5,16 @@ import pandas as pd
 url = "https://www.oddsportal.com/american-football/usa/nfl-2017-2018/results/#/page/{}/"
 
 def scrape_odds_portal(url):
+    #instantiate an automated browser
     browser = webdriver.Chrome()
     browser.get(url)
-
+    # get the sources of the page
     df= pd.read_html(browser.page_source, header=0)[0]
-
-    dateList = []
-    gameList = []
-    money_line1List = []
-    money_line2List = []
+    # we are interested in dates, matchups, and moneylines for each team
+    dateList = [] 
+    gameList = [] #row[2]
+    money_line1List = [] #row[5]
+    money_line2List = [] # row[6]
 
     for row in df.itertuples():
         if not isinstance(row[1], str):
